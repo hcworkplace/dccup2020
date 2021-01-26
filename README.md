@@ -113,7 +113,8 @@ def dacon_rmse(true, pred):
             - 대회 참가자 수 (1가지)
         - train data : 예측일로 부터 100일 전 데이터부터 가져 옴(100개)
         - hidden size = 64, epochs = 500
-    - prophet 설명
+        - [lstm코드](https://github.com/gam-bit/dc/blob/main/Codes/%5BModeling%5D04_seq2seq.ipynb)
+        
         - facebook에서 만든 시계열 예측 모델
         - train 전체 기간 데이터 사용 → submission 기간만큼 예측
         - input dimension : 1 - 자기자신
