@@ -114,7 +114,7 @@ def dacon_rmse(true, pred):
         - train data : 예측일로 부터 100일 전 데이터부터 가져 옴(100개)
         - hidden size = 64, epochs = 500
         - [lstm코드](https://github.com/gam-bit/dc/blob/main/Codes/%5BModeling%5D04_seq2seq.ipynb)
-        
+    - facebook prophet 설명 
         - facebook에서 만든 시계열 예측 모델
         - train 전체 기간 데이터 사용 → submission 기간만큼 예측
         - input dimension : 1 - 자기자신
@@ -128,7 +128,13 @@ def dacon_rmse(true, pred):
         - seasonality_mode = "multiplicative"로 하려고 했으나 결과 값들의 편차가 커져서 default 값인 "additive"를 사용
         - 결과 값 중 y_hat을 예측값으로 사용
         - [prophet코드](https://github.com/hcworkplace/dccup2020/blob/main/DaconCup_04(facebook_prophet).ipynb)
-        
+      
+    - 앙상블 
+        - (facebook prophet + 1.2 * lstm)/2
+
+### 결과
+![그래프](https://user-images.githubusercontent.com/66463059/105956067-941c5380-60ba-11eb-96b6-9f4b3ae2a5ba.png)   
+        - 갈색선이 실제 값, 순서대로 사용자, 세션, 신규방문자, 페이지뷰
 
 
 ## 💡 Pipeline
